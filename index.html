@@ -251,6 +251,7 @@
 </section>
 
 <!-- ═══ CONTACT ════════════════════════════════════════════ -->
+
 <section id="contact">
   <div class="container">
     <div class="section-header reveal">
@@ -267,20 +268,56 @@
       </div>
       
       <div class="reveal">
-        <form id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="form-row"><div class="form-group"><label data-i18n="contact.form.name">Full Name</label><input type="text" id="name" name="name" placeholder="Your Name" required /></div>
-          <div class="form-group"><label data-i18n="contact.form.company">Company</label><input type="text" id="company" name="company" placeholder="Company" /></div></div>
-          <div class="form-group"><label data-i18n="contact.form.email">Email Address</label><input type="email" id="email" name="email" placeholder="yourmail@company.com" required /></div>
-          <div class="form-group"><label data-i18n="contact.form.industry">Industry</label><select id="industry" name="industry"><option value="" disabled selected>Select your industry</option><option>Oil & Gas</option><option>Energy</option><option>Construction</option><option>Manufacturing</option><option>Healthcare</option><option>Mining</option><option>Water & Utilities</option><option>Transport</option><option>Other</option></select></div>
-          <div class="form-group"><label data-i18n="contact.form.message">Project / Equipment Requirements</label><textarea id="message" name="message" placeholder="Describe your procurement requirement…" required></textarea></div>
+        <form action="https://formsubmit.co/sales@grupo-safeq.com" method="POST">
+          <!-- Anti-spam and professional redirect -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New SAFEQ Website Contact Form">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://grupo-safeq.com/thank-you">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="contact.form.name">Full Name</label>
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="contact.form.company">Company</label>
+              <input type="text" name="company" placeholder="Company" />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label data-i18n="contact.form.email">Email Address</label>
+            <input type="email" name="email" placeholder="yourmail@company.com" required />
+          </div>
+          
+          <div class="form-group">
+            <label data-i18n="contact.form.industry">Industry</label>
+            <select name="industry">
+              <option value="" disabled selected>Select your industry</option>
+              <option>Oil & Gas</option>
+              <option>Energy</option>
+              <option>Construction</option>
+              <option>Manufacturing</option>
+              <option>Healthcare</option>
+              <option>Mining</option>
+              <option>Water & Utilities</option>
+              <option>Transport</option>
+              <option>Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label data-i18n="contact.form.message">Project / Equipment Requirements</label>
+            <textarea name="message" placeholder="Describe your procurement requirement…" required></textarea>
+          </div>
+          
           <button type="submit" class="btn-primary" style="width:100%;justify-content:center" data-i18n="contact.form.submit">Send Enquiry</button>
-          <p id="formMsg" style="margin-top:1rem;font-size:.85rem;display:none;"></p>
         </form>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ═══ FOOTER ════════════════════════════════════════════ -->
 <footer>
   <div class="container footer-inner">
