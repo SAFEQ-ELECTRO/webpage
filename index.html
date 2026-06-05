@@ -11,35 +11,52 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
+<!-- ═══ TOP BAR WITH TOGGLES ═══════════════════════════════ -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="pt">PT</button>
+    </div>
+    <div class="darkmode-toggle">
+      <span class="darkmode-label"></span>
+      <label class="switch">
+        <input type="checkbox" id="darkmodeCheckbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
 <!-- ═══ NAV ══════════════════════════════════════════════ -->
 <nav id="navbar">
   <div class="container nav-inner">
-   <a href="#hero" class="logo">
-  <img src="images/safeq-logo.png" alt="SAFEQ Logo" style="height: 40px; width: auto;">
-</a>
+    <a href="#hero" class="logo">
+      <img src="images/safeq-logo.png" alt="SAFEQ Logo">
+    </a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#industries">Industries</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#industries" data-i18n="nav.industries">Industries</a></li>
+      <li><a href="#process" data-i18n="nav.process">Process</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Get a Quote</a>
+    <a href="#contact" class="nav-cta" data-i18n="nav.cta">Get a Quote</a>
     <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" class="mob-link">About</a>
-    <a href="#services" class="mob-link">Services</a>
-    <a href="#industries" class="mob-link">Industries</a>
-    <a href="#process" class="mob-link">Process</a>
-    <a href="#contact" class="mob-link">Contact</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#industries" data-i18n="nav.industries">Industries</a>
+    <a href="#process" data-i18n="nav.process">Process</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
   </div>
 </nav>
 
@@ -48,41 +65,38 @@
   <div class="hero-bg"></div>
   <div class="container">
     <div class="hero-content">
-      <p class="label hero-label"><span class="accent-line"></span>Engineering Procurement Solutions</p>
-      <h1 class="hero-headline">
+      <p class="label hero-label"><span class="accent-line"></span><span data-i18n="hero.label">Engineering Procurement Solutions</span></p>
+      <h1 class="hero-headline" data-i18n="hero.headline">
         Sourcing the<br>
         <em>right equipment</em><br>
-        for Your every project.
+        for Your project.
       </h1>
-      <p class="hero-sub">
+      <p class="hero-sub" data-i18n="hero.sub">
         SAFEQ connects industries with precisely sourced engineering equipment — tailored procurement, verified quality, and reliable delivery for every specification.
       </p>
       <div class="hero-btns">
-        <a href="#services" class="btn-primary">
-          Our Services
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#contact" class="btn-secondary">Request a Quote</a>
+        <a href="#services" class="btn-primary" data-i18n="hero.btn1">Our Services</a>
+        <a href="#contact" class="btn-secondary" data-i18n="hero.btn2">Request a Quote</a>
       </div>
     </div>
   </div>
   <div class="stat-strip">
     <div class="stat-strip-inner container">
       <div class="stat">
-        <div class="stat-num">200<span>+</span><!-- suppliers --></div>
-        <div class="stat-desc">Verified Suppliers</div>
+        <div class="stat-num">200<span>+</span></div>
+        <div class="stat-desc" data-i18n="stats.suppliers">Verified Suppliers</div>
       </div>
       <div class="stat">
-        <div class="stat-num">09<span>+</span><!-- industries --></div>
-        <div class="stat-desc">Industries Served</div>
+        <div class="stat-num">09<span>+</span></div>
+        <div class="stat-desc" data-i18n="stats.industries">Industries Served</div>
       </div>
       <div class="stat">
         <div class="stat-num">92<span>%</span></div>
-        <div class="stat-desc">On-Time Delivery</div>
+        <div class="stat-desc" data-i18n="stats.delivery">On-Time Delivery</div>
       </div>
       <div class="stat">
         <div class="stat-num">12 <span>yr</span></div>
-        <div class="stat-desc">Combined Experience</div>
+        <div class="stat-desc" data-i18n="stats.experience">Combined Experience</div>
       </div>
     </div>
   </div>
@@ -93,23 +107,39 @@
   <div class="container">
     <div class="about-grid">
       <div class="reveal">
-        <p class="label"><span class="accent-line"></span>Who We Are</p>
-        <h2 class="section-title">Built on precision.<br>Driven by reliability.</h2>
-        <p class="section-body" style="max-width:100%">
-          SAFEQ - Strategic Assets For Equipment and Quick Solutions, SU, LDA. is a multi-disciplinary solutions company operating across Southern Africa.<br> Built on a simple but powerful principle: solving complex operational and technical problems throuh smart, practical, and scalable solutions. <br> We exist to bridge the gap between need and execution, wheter it is sourcing critical equipment, designing Technical solutions, improving business efficiency, or deploying urgent operational fixes, SAFEQ acts as a single trusted partner that manages the entire process from concept to completion.
-          <!-- Add your company story here -->
+        <p class="label"><span class="accent-line"></span><span data-i18n="about.label">Who We Are</span></p>
+        <h2 class="section-title" data-i18n="about.title">Built on precision.<br>Driven by reliability.</h2>
+        <p class="section-body" style="max-width:100%" data-i18n="about.text">
+          SAFEQ - Strategic Assets For Equipment and Quick Solutions, SU, LDA. is a multi-disciplinary solutions company operating across Southern Africa.<br> Built on a simple but powerful principle: solving complex operational and technical problems through smart, practical, and scalable solutions. <br> We exist to bridge the gap between need and execution, whether it is sourcing critical equipment, designing Technical solutions, improving business efficiency, or deploying urgent operational fixes, SAFEQ acts as a single trusted partner that manages the entire process from concept to completion.
         </p>
         <ul class="value-list">
-          <li>Technical procurement expertise across all major equipment categories</li>
-          <li>Engineering Consulting and Technical Installations</li>
-          <li>3D Modeling and Rapid prototyping for Parts and Components</li>
-          <li>Strict quality assurance and compliance standards</li>
+          <li data-i18n="about.list1">Technical procurement expertise across all major equipment categories</li>
+          <li data-i18n="about.list2">Engineering Consulting and Technical Installations</li>
+          <li data-i18n="about.list3">3D Modeling and Rapid prototyping for Parts and Components</li>
+          <li data-i18n="about.list4">Strict quality assurance and compliance standards</li>
         </ul>
       </div>
       <div class="reveal" style="transition-delay:.15s">
-        <div class="about-visual">
-          <!-- Replace this placeholder with your company photo or equipment image -->
-          <img src="images/photo.png" alt="SAFEQ AD">
+                <!-- Slideshow Container -->
+        <div class="about-slideshow">
+          <div class="slideshow-container-about">
+            <div class="about-slide active" style="background-image: url('images/about1.jpg');"></div>
+            <div class="about-slide" style="background-image: url('images/about2.jpg');"></div>
+            <div class="about-slide" style="background-image: url('images/about3.jpg');"></div>
+            <div class="about-slide" style="background-image: url('images/about4.jpg');"></div>
+          </div>
+          
+          <!-- Navigation Buttons -->
+          <button class="about-slide-prev" id="aboutSlidePrev">❮</button>
+          <button class="about-slide-next" id="aboutSlideNext">❯</button>
+          
+          <!-- Dot Indicators -->
+          <div class="about-slide-dots">
+            <span class="about-dot active"></span>
+            <span class="about-dot"></span>
+            <span class="about-dot"></span>
+            <span class="about-dot"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -120,66 +150,50 @@
 <section id="services">
   <div class="container">
     <div class="section-header reveal">
-      <p class="label"><span class="accent-line"></span>What We Do</p>
-      <h2 class="section-title">Services</h2>
-      <p class="section-body">SAFEQ provides integrated solutions across multiple sectors. We also assist clients with technical sourcing, project execution, and customized solutions designed to improve operational efficiency and reduce downtime.</p>
+      <p class="label"><span class="accent-line"></span><span data-i18n="services.label">What We Do</span></p>
+      <h2 class="section-title" data-i18n="services.title">Services</h2>
+      <p class="section-body" data-i18n="services.subtitle">SAFEQ provides integrated solutions across multiple sectors. We also assist clients with technical sourcing, project execution, and customized solutions designed to improve operational efficiency and reduce downtime.</p>
     </div>
     <div class="services-grid reveal" style="transition-delay:.1s">
-
       <div class="service-card">
-        <!-- Gear / Equipment icon -->
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M16.24 7.76a6 6 0 0 1 0 8.49M6.34 17.66a8 8 0 0 1 0-11.31M4.93 19.07a10 10 0 0 1 0-14.14"/>
         </svg>
-        <h3 class="service-title">Equipment Sourcing</h3>
-        <p class="service-desc">
-          We source and supply industrial, electrical, mechanical, and IT equipment tailored to client needs. We leverage a global supplier network to match specs, certifications, and budget.
-        </p>
+        <h3 class="service-title" data-i18n="services.service1.title">Equipment Sourcing</h3>
+        <p class="service-desc" data-i18n="services.service1.desc">We source and supply industrial, electrical, mechanical, and IT equipment tailored to client needs. We leverage a global supplier network to match specs, certifications, and budget.</p>
       </div>
-
       
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
         </svg>
-        <h3 class="service-title">Technical Consulting & Components Modeling</h3>
-        <p class="service-desc">
-          We provide strategic advisory on procurement processes, engineering solutions, and operational efficiency. As part of this service, we offer 3D modeling, simulation and design support to visualize, develop, and validate components before production. This includes creating technical drawings, prototypes, and digital models to improve decision-making, and optimize project execution.
-        </p>
+        <h3 class="service-title" data-i18n="services.service2.title">Technical Consulting & Components Modeling</h3>
+        <p class="service-desc" data-i18n="services.service2.desc">We provide strategic advisory on procurement processes, engineering solutions, and operational efficiency. As part of this service, we offer 3D modeling, simulation and design support to visualize, develop, and validate components before production. This includes creating technical drawings, prototypes, and digital models to improve decision-making, and optimize project execution.</p>
       </div>
 
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
         </svg>
-        <h3 class="service-title"> Delivery Management</h3>
-        <p class="service-desc">
-          We do End-to-end coordination of freight, customs clearance, and last-mile delivery, through our network of trusted logistic partners. This service reduces complexity for clients, ensuring a seamless and reliable delivery experience.   .
-        </p>
+        <h3 class="service-title" data-i18n="services.service3.title">Delivery Management</h3>
+        <p class="service-desc" data-i18n="services.service3.desc">We do End-to-end coordination of freight, customs clearance, and last-mile delivery, through our network of trusted logistic partners. This service reduces complexity for clients, ensuring a seamless and reliable delivery experience.</p>
       </div>
-
 
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
         </svg>
-        <h3 class="service-title">Efficiency and Performance Solutions</h3>
-        <p class="service-desc">
-          SAFEQ delivers tailored solutions aimed at improving operational performance, reducing costs, and increasing overall business efficiency. This includes the implementation of software tools, workflow optimization, and system improvement designed to streamline business operations. We also provice energy efficiency solutions to help clients reduce consumption and improve sustainability, as well as rapid deployment support to solve urgent operational or technical challenges. Our approach focuses on practical, measurable improvements that enhance productivity and long-term business performance.
-        </p>
+        <h3 class="service-title" data-i18n="services.service4.title">Efficiency and Performance Solutions</h3>
+        <p class="service-desc" data-i18n="services.service4.desc">SAFEQ delivers tailored solutions aimed at improving operational performance, reducing costs, and increasing overall business efficiency. This includes the implementation of software tools, workflow optimization, and system improvement designed to streamline business operations. We also provide energy efficiency solutions to help clients reduce consumption and improve sustainability, as well as rapid deployment support to solve urgent operational or technical challenges.</p>
       </div>
       
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
         </svg>
-        <h3 class="service-title">Quality Assurance</h3>
-        <p class="service-desc">
-          Rigorous inspection and verification at every stage. We ensure equipment and services meets international standards before it reaches your facility.
-        </p>
+        <h3 class="service-title" data-i18n="services.service5.title">Quality Assurance</h3>
+        <p class="service-desc" data-i18n="services.service5.desc">Rigorous inspection and verification at every stage. We ensure equipment and services meets international standards before it reaches your facility.</p>
       </div>
-
-
     </div>
   </div>
 </section>
@@ -188,47 +202,19 @@
 <section id="industries">
   <div class="container">
     <div class="section-header reveal">
-      <p class="label"><span class="accent-line"></span>Who We Serve</p>
-      <h2 class="section-title">Industries</h2>
-      <p class="section-body">We specialize in the procurement and sales of both Hardware and Software solutions, tailoring our services to meet specific needs of diverse industries across Mozambique and the Southern Africa Region.</p>
-     
+      <p class="label"><span class="accent-line"></span><span data-i18n="industries.label">Who We Serve</span></p>
+      <h2 class="section-title" data-i18n="industries.title">Industries</h2>
+      <p class="section-body" data-i18n="industries.subtitle">We specialize in the procurement and sales of both Hardware and Software solutions, tailoring our services to meet specific needs of diverse industries across Mozambique and the Southern Africa Region.</p>
     </div>
-    <div class="industries-grid reveal" style="transition-delay:.1s">
-
-      <div class="industry-pill">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-        <div class="industry-name">Oil &amp; Gas and Mining</div>
-      </div>
-      <div class="industry-pill">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        <div class="industry-name">Energy &amp; Natural Resources</div>
-      </div>
-      <div class="industry-pill">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg>
-        <div class="industry-name">Construction &amp; Infrastructure</div>
-      </div>
-      <div class="industry-pill">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        <div class="industry-name">Technology &amp; Digital Services </div>
-      </div>
-      <div class="industry-pill">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        <div class="industry-name">Healthcare</div>
-      </div>
-      <div class="industry-pill">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        <div class="industry-name">Telecomunications</div>
-      </div>
-      <div class="industry-pill">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        <div class="industry-name">ENVIRONMENTAL &amp; UTILITIES</div>
-      </div>
-      <div class="industry-pill">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>
-        <div class="industry-name">Transport &amp; Logistics</div>
-      </div>
-      <!-- Add more industries as needed -->
-
+    <div class="industries-grid reveal">
+      <div class="industry-pill"><span data-i18n="industries.item1">Oil & Gas and Mining</span></div>
+      <div class="industry-pill"><span data-i18n="industries.item2">Energy & Natural Resources</span></div>
+      <div class="industry-pill"><span data-i18n="industries.item3">Construction & Infrastructure</span></div>
+      <div class="industry-pill"><span data-i18n="industries.item4">Technology & Digital Services</span></div>
+      <div class="industry-pill"><span data-i18n="industries.item5">Healthcare</span></div>
+      <div class="industry-pill"><span data-i18n="industries.item6">Telecommunications</span></div>
+      <div class="industry-pill"><span data-i18n="industries.item7">Environmental & Utilities</span></div>
+      <div class="industry-pill"><span data-i18n="industries.item8">Transport & Logistics</span></div>
     </div>
   </div>
 </section>
@@ -237,31 +223,15 @@
 <section id="process">
   <div class="container">
     <div class="section-header reveal">
-      <p class="label"><span class="accent-line"></span>How It Works</p>
-      <h2 class="section-title">Our Process</h2>
-      <p class="section-body">A transparent, repeatable methodology that removes complexity from your procurement.</p>
+      <p class="label"><span class="accent-line"></span><span data-i18n="process.label">How It Works</span></p>
+      <h2 class="section-title" data-i18n="process.title">Our Process</h2>
+      <p class="section-body" data-i18n="process.subtitle">A transparent, repeatable methodology that removes complexity from your procurement.</p>
     </div>
-    <div class="process-steps reveal" style="transition-delay:.1s">
-      <div class="step">
-        <div class="step-num">01</div>
-        <h3 class="step-title">Requirements Brief</h3>
-        <p class="step-desc">We take time to understand your technical specifications, timelines, compliance requirements, and budget constraints.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <h3 class="step-title">Supplier Identification</h3>
-        <p class="step-desc">Our network is scanned for qualified suppliers who can meet your exact needs — local or international.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <h3 class="step-title">Evaluation &amp; QA</h3>
-        <p class="step-desc">Shortlisted suppliers are evaluated for quality, certifications, capacity, and reliability before any order is placed.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <h3 class="step-title">Order &amp; Delivery</h3>
-        <p class="step-desc">We manage the full procurement cycle — purchase, inspection, documentation, and delivery — with full traceability.</p>
-      </div>
+    <div class="process-steps reveal">
+      <div class="step"><div class="step-num">01</div><h3 class="step-title" data-i18n="process.step1">Requirements Brief</h3><p class="step-desc" data-i18n="process.step1.desc">We take time to understand your technical specifications, timelines, compliance requirements, and budget constraints.</p></div>
+      <div class="step"><div class="step-num">02</div><h3 class="step-title" data-i18n="process.step2">Supplier Identification</h3><p class="step-desc" data-i18n="process.step2.desc">Our network is scanned for qualified suppliers who can meet your exact needs — local or international.</p></div>
+      <div class="step"><div class="step-num">03</div><h3 class="step-title" data-i18n="process.step3">Evaluation & QA</h3><p class="step-desc" data-i18n="process.step3.desc">Shortlisted suppliers are evaluated for quality, certifications, capacity, and reliability before any order is placed.</p></div>
+      <div class="step"><div class="step-num">04</div><h3 class="step-title" data-i18n="process.step4">Order & Delivery</h3><p class="step-desc" data-i18n="process.step4.desc">We manage the full procurement cycle — purchase, inspection, documentation, and delivery — with full traceability.</p></div>
     </div>
   </div>
 </section>
@@ -271,14 +241,11 @@
   <div class="container">
     <div class="cta-inner">
       <div class="cta-text">
-        <p class="label" style="color: var(--ink); opacity:.6"><span class="accent-line" style="background:var(--ink);opacity:.4"></span>Let's Work Together</p>
-        <h2 class="section-title">Have a procurement<br>challenge? Talk to us.</h2>
-        <p class="section-body">Tell us what you need and we'll put together a tailored solution within 48 hours.</p>
+        <p class="label"><span class="accent-line"></span><span data-i18n="cta.label">Let's Work Together</span></p>
+        <h2 class="section-title" data-i18n="cta.title">Have a procurement<br>challenge? Talk to us.</h2>
+        <p class="section-body" data-i18n="cta.subtitle">Tell us what you need and we'll put together a tailored solution within 48 hours.</p>
       </div>
-      <a href="#contact" class="btn-dark">
-        Get in Touch
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
+      <a href="#contact" class="btn-dark" data-i18n="cta.btn">Get in Touch</a>
     </div>
   </div>
 </section>
@@ -287,75 +254,27 @@
 <section id="contact">
   <div class="container">
     <div class="section-header reveal">
-      <p class="label"><span class="accent-line"></span>Reach Out</p>
-      <h2 class="section-title">Contact Us</h2>
+      <p class="label"><span class="accent-line"></span><span data-i18n="contact.label">Reach Out</span></p>
+      <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
-        <div>
-          <p class="section-body" style="max-width:100%">Whether you have a detailed spec or just an initial requirement, we're ready to start the conversation.</p>
-        </div>
-        <div class="contact-item">
-          <p class="contact-item-label">Email</p>
-          <p class="contact-item-value">sales@grupo-safeq.com</p>
-        </div>
-        <div class="contact-item">
-          <p class="contact-item-label">Phone</p>
-          <p class="contact-item-value">+258 85 753 6026</p>
-        </div>
-        <div class="contact-item">
-          <p class="contact-item-label">Address</p>
-          <p class="contact-item-value">Rua Mário Coluna, Quarteirão 24, Número 601, R/C</p>
-          <p> Bairro das Mahotas, Cidade de Maputo, Moçambique.</p>
-        </div>
-        <div class="contact-item">
-          <p class="contact-item-label">Business Hours</p>
-          <p class="contact-item-value"> Mon - Friday , 8AM - 5PM.</p>
-          <p> Weekends & Public Holidays, Closed. </p>
-        </div>
+        <div><p class="section-body" style="max-width:100%" data-i18n="contact.text">Whether you have a detailed spec or just an initial requirement, we're ready to start the conversation.</p></div>
+        <div class="contact-item"><p class="contact-item-label" data-i18n="contact.email.label">Email</p><p class="contact-item-value">sales@grupo-safeq.com</p></div>
+        <div class="contact-item"><p class="contact-item-label" data-i18n="contact.phone.label">Phone</p><p class="contact-item-value">+258 85 753 6026</p></div>
+        <div class="contact-item"><p class="contact-item-label" data-i18n="contact.address.label">Address</p><p class="contact-item-value">Rua Mário Coluna, Quarteirão 24, Número 601, R/C<br>Bairro das Mahotas, Cidade de Maputo, Moçambique.</p></div>
+        <div class="contact-item"><p class="contact-item-label" data-i18n="contact.hours.label">Business Hours</p><p class="contact-item-value">Mon - Friday, 8AM - 5PM.<br>Weekends & Public Holidays, Closed.</p></div>
       </div>
       
-      <div class="reveal" style="transition-delay:.15s">
-        <!-- This form is static — wire it up to a service like Formspree, Netlify Forms, or EmailJS -->
+      <div class="reveal">
         <form id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Your Name" required />
-            </div>
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Company" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="yourmail@company.com" required />
-          </div>
-          <div class="form-group">
-            <label for="industry">Industry</label>
-            <select id="industry" name="industry">
-              <option value="" disabled selected>Select your industry</option>
-              <option>Oil &amp; Gas</option>
-              <option>Energy</option>
-              <option>Construction</option>
-              <option>Manufacturing</option>
-              <option>Healthcare</option>
-              <option>Mining</option>
-              <option>Water &amp; Utilities</option>
-              <option>Transport</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Project / Equipment Requirements</label>
-            <textarea id="message" name="message" placeholder="Describe your procurement requirement…" required></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="width:100%;justify-content:center">
-            Send Enquiry
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-          <p id="formMsg" style="margin-top:1rem;font-size:.85rem;color:var(--amber);display:none;"></p>
+          <div class="form-row"><div class="form-group"><label data-i18n="contact.form.name">Full Name</label><input type="text" id="name" name="name" placeholder="Your Name" required /></div>
+          <div class="form-group"><label data-i18n="contact.form.company">Company</label><input type="text" id="company" name="company" placeholder="Company" /></div></div>
+          <div class="form-group"><label data-i18n="contact.form.email">Email Address</label><input type="email" id="email" name="email" placeholder="yourmail@company.com" required /></div>
+          <div class="form-group"><label data-i18n="contact.form.industry">Industry</label><select id="industry" name="industry"><option value="" disabled selected>Select your industry</option><option>Oil & Gas</option><option>Energy</option><option>Construction</option><option>Manufacturing</option><option>Healthcare</option><option>Mining</option><option>Water & Utilities</option><option>Transport</option><option>Other</option></select></div>
+          <div class="form-group"><label data-i18n="contact.form.message">Project / Equipment Requirements</label><textarea id="message" name="message" placeholder="Describe your procurement requirement…" required></textarea></div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center" data-i18n="contact.form.submit">Send Enquiry</button>
+          <p id="formMsg" style="margin-top:1rem;font-size:.85rem;display:none;"></p>
         </form>
       </div>
     </div>
@@ -365,19 +284,17 @@
 <!-- ═══ FOOTER ════════════════════════════════════════════ -->
 <footer>
   <div class="container footer-inner">
-    <p class="footer-copy">&copy; <span id="yr"></span> SAFEQ. All rights reserved.</p>
+    <p class="footer-copy">© <span id="yr"></span> SAFEQ. <span data-i18n="footer.rights">All rights reserved.</span></p>
     <ul class="footer-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <!-- <li><a href="privacy.html">Privacy Policy</a></li> -->
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
   </div>
 </footer>
 
-<!-- ═══ SCRIPTS ═══════════════════════════════════════════ -->
+ <script src="js/script.js"></script>
 
-  <script src="js/script.js"></script>
 
 </body>
 </html>
