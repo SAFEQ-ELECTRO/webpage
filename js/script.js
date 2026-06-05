@@ -123,16 +123,7 @@
     }
   }
 
-  // Form handler (mock)
-  window.handleSubmit = function(e) {
-    e.preventDefault();
-    const msg = document.getElementById('formMsg');
-    msg.textContent = currentLang === 'en' ? '✓ Thank you! We\'ll contact you soon.' : '✓ Obrigado! Entraremos em contato em breve.';
-    msg.style.display = 'block';
-    msg.style.color = '#4caf50';
-    setTimeout(() => { msg.style.display = 'none'; }, 5000);
-    e.target.reset();
-  };
+  
 
   // Set current year
   document.getElementById('yr').textContent = new Date().getFullYear();
